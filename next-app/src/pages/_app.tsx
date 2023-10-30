@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { useState } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
+import { theme } from '@/theme/theme'
 
 export default function App({ Component, pageProps: { session, ...pageProps }, router }: AppProps) {
   const [queryClient] = useState(
@@ -17,11 +18,11 @@ export default function App({ Component, pageProps: { session, ...pageProps }, r
 
   return (
     <>
-      <ChakraProvider>
-        <QueryClientProvider client={queryClient}>
+      <QueryClientProvider client={queryClient}>
+        <ChakraProvider theme={theme}>
           <Component {...pageProps} />
-        </QueryClientProvider>
-      </ChakraProvider>
+        </ChakraProvider>
+      </QueryClientProvider>
     </>
   )
 }

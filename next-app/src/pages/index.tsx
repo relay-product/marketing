@@ -1,28 +1,19 @@
-import { useMessages } from '@/hooks/useMessages'
-import { FrontendMessageService } from '@/services/messages.service'
+import { Flex, Heading } from '@chakra-ui/react'
 
 export default function Home() {
-  const { messagesQuery: messages } = useMessages()
-
-  const postMessage = async () => {
-    const newMessage = await FrontendMessageService.createMessage({
-      content: 'Hi!',
-    })
-    messages.refetch()
-  }
-
   return (
     <>
-      Messages
-      <button onClick={() => postMessage()}>Say hi!</button>
-      {messages.data?.map((message) => {
-        const sentDate = new Date(message.createdAt).toLocaleString()
-        return (
-          <div key={message.id}>
-            {message.content} Sent at: {sentDate}
-          </div>
-        )
-      })}
+      <Flex backgroundColor={'greyscale.grey-900'} flexDir={'column'} w={'100vw'}>
+        <Flex
+          backdropFilter={'blur(5px)'}
+          background={'rgba(255, 255, 255, 0.2)'}
+          position={'fixed'}
+        >
+          <Heading color={'greyscale.grey-50'} variant={'h3'}>
+            Relay
+          </Heading>
+        </Flex>
+      </Flex>
     </>
   )
 }
