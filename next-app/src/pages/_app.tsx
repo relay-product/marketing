@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { useState } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '@/theme/theme'
+import MainLayout from '@/components/layouts/Main.layout'
 
 export default function App({ Component, pageProps: { session, ...pageProps }, router }: AppProps) {
   const [queryClient] = useState(
@@ -20,7 +21,9 @@ export default function App({ Component, pageProps: { session, ...pageProps }, r
     <>
       <QueryClientProvider client={queryClient}>
         <ChakraProvider theme={theme}>
-          <Component {...pageProps} />
+          <MainLayout>
+            <Component {...pageProps} />
+          </MainLayout>
         </ChakraProvider>
       </QueryClientProvider>
     </>
