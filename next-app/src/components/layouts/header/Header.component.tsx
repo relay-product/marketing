@@ -30,26 +30,7 @@ export const Header = () => {
         <Heading variant={'h1'} fontWeight={'600'} color={'greyscale.grey-50'} fontSize={'2rem'}>
           Relay
         </Heading>
-        <Flex
-          pb={'1.25rem'}
-          left={'20rem'}
-          position={'fixed'}
-          justifyContent={'space-between'}
-          gap={'5rem'}
-        >
-          <Text variant={'b3'} color={'greyscale.grey-50'}>
-            Our Work
-          </Text>
-          <Text variant={'b3'} color={'greyscale.grey-50'}>
-            Our Philosophy
-          </Text>
-          <Text variant={'b3'} color={'greyscale.grey-50'}>
-            Our Team
-          </Text>
-          <Text variant={'b3'} color={'greyscale.grey-50'}>
-            Metric
-          </Text>
-        </Flex>
+
         <Flex mt={'1rem'} height={'1px'} bgColor={'greyscale.grey-50'} shrink={0} grow={1}></Flex>
       </Flex>
       <Spacer cursor="default" />
@@ -58,7 +39,28 @@ export const Header = () => {
         <></>
       ) : (
         // <DesktopMenu />
-        <></>
+        <>
+          <Flex
+            pb={'1.25rem'}
+            left={'20rem'}
+            position={'fixed'}
+            justifyContent={'space-between'}
+            gap={'5rem'}
+          >
+            <Text variant={'b3'} color={'greyscale.grey-50'}>
+              Our Work
+            </Text>
+            <Text variant={'b3'} color={'greyscale.grey-50'}>
+              Our Philosophy
+            </Text>
+            <Text variant={'b3'} color={'greyscale.grey-50'}>
+              Our Team
+            </Text>
+            <Text variant={'b3'} color={'greyscale.grey-50'}>
+              Metric
+            </Text>
+          </Flex>
+        </>
       )}
     </Flex>
   )
