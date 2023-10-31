@@ -13,7 +13,6 @@ export const ButtonStyles: ComponentStyleConfig = {
       fontSize: '1rem',
       fontWeight: '800',
       height: 'fit-content',
-      padding: '1rem 1.5rem 1rem 1.5rem',
       width: 'fit-content',
     },
   },
