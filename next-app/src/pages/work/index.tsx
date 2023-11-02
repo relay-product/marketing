@@ -1,8 +1,10 @@
 import { Box, Flex, SimpleGrid } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
 import { Heading } from '../../components/Heading.component'
 import { Text } from '../../components/Text.component'
 
-export default function Home() {
+export default function Work() {
+  const router = useRouter()
   return (
     <>
       <Flex
@@ -44,18 +46,30 @@ export default function Home() {
           </SimpleGrid>
         </Flex>
         <Flex w="100%" flexWrap="wrap">
-          <Box w="100%" h="454px" bg="greyscale.grey-700">
-            {/* Make image the box background. Or place a chakra <Image> here */}
-          </Box>
-          <Heading type="h2" color={'greyscale.grey-50'} marginTop="16px">
-            Revolutionizing Medicare Enrollment.
-          </Heading>
-          <Text color="greyscale.grey-50" w="100%" type="b2">
-            Scaling a legacy services company with software to create an incredibly valuable new
-            SaaS product.
-          </Text>
+          <Flex
+            w="100%"
+            flexWrap="wrap"
+            cursor="pointer"
+            onClick={() => router.push('/work/ShopYourPlan')}
+          >
+            <Box w="100%" h="454px" bg="greyscale.grey-700">
+              {/* Make image the box background. Or place a chakra <Image> here */}
+            </Box>
+            <Heading type="h2" color={'greyscale.grey-50'} marginTop="16px">
+              Revolutionizing Medicare Enrollment.
+            </Heading>
+            <Text color="greyscale.grey-50" w="100%" type="b2">
+              Scaling a legacy services company with software to create an incredibly valuable new
+              SaaS product.
+            </Text>
+          </Flex>
           <Flex w="100%" gap="70px" marginTop="46px">
-            <Flex w="100%" flexWrap="wrap">
+            <Flex
+              w="100%"
+              flexWrap="wrap"
+              cursor="pointer"
+              onClick={() => router.push('/work/FiveStarFans')}
+            >
               <Box w="100%" h="454px" bg="greyscale.grey-700"></Box>
               <Heading type="h2" color={'greyscale.grey-50'} w="80%" marginTop="16px">
                 Napkin Sketch to Revenue in 7 Weeks.
@@ -64,7 +78,12 @@ export default function Home() {
                 Building a bold new marketplace from scratch in the professional sports space.
               </Text>
             </Flex>
-            <Flex w="100%" flexWrap="wrap">
+            <Flex
+              w="100%"
+              flexWrap="wrap"
+              cursor="pointer"
+              onClick={() => router.push('/work/Entrega')}
+            >
               <Box w="100%" h="454px" bg="greyscale.grey-700"></Box>
               <Heading type="h2" color={'greyscale.grey-50'} w="80%" marginTop="16px">
                 Process Improvement Across Job sites.
