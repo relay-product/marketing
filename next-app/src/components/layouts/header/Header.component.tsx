@@ -58,13 +58,17 @@ export const Header = ({ isMobile }: MobileProps) => {
       position={'fixed'}
       width={'100%'}
       zIndex={'100'}
+      backgroundColor={'greyscale.grey-900'}
     >
-      <Flex w={'100%'} flexDir={'row'} padding={'0.25rem'} gap={'0.5rem'} alignItems={'center'}>
-        <Image
-          h={device === 'mobile' ? '1rem' : '2rem'}
-          src="/logo.svg"
-          onClick={() => router.push('/')}
-        />
+      <Flex
+        w={'100%'}
+        flexDir={'row'}
+        padding={'0.25rem'}
+        gap={'0.5rem'}
+        alignItems={'center'}
+        onClick={() => router.push('/')}
+      >
+        <Image h={device === 'mobile' ? '1rem' : '2rem'} src="/logo.svg" />
         <Heading variant={'h1'} fontWeight={'600'} color={'greyscale.grey-50'} fontSize={'2rem'}>
           Relay
         </Heading>
