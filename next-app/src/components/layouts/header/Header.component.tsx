@@ -3,10 +3,8 @@ import {
   Flex,
   Spacer,
   useDisclosure,
-  Heading,
   Divider,
   Box,
-  Text,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -21,6 +19,8 @@ import { useDevice } from '@/hooks/useDevice'
 import { HamburgerIcon } from '@chakra-ui/icons'
 // import MobileMenu from '@/components/layouts/header/MobileMenu.component'
 // import DesktopMenu from '@/components/layouts/header/DesktopMenu.component'
+import { Heading } from '../../Heading.component'
+import { Text } from '../../Text.component'
 
 type MobileProps = {
   isMobile: boolean
@@ -69,7 +69,7 @@ export const Header = ({ isMobile }: MobileProps) => {
         onClick={() => router.push('/')}
       >
         <Image h={device === 'mobile' ? '1rem' : '2rem'} src="/logo.svg" />
-        <Heading variant={'h1'} fontWeight={'600'} color={'greyscale.grey-50'} fontSize={'2rem'}>
+        <Heading type="h1" fontWeight={'600'} color={'greyscale.grey-50'} fontSize={'2rem'}>
           Relay
         </Heading>
 
@@ -93,16 +93,16 @@ export const Header = ({ isMobile }: MobileProps) => {
               <DrawerCloseButton color={'greyscale.grey-50'} />
               <DrawerBody>
                 <Flex flexDir={'column'} py="1rem" gap="1rem" h="100%" w={'100%'}>
-                  <Text onClick={handleWorkClick} variant={'b3'} color={'greyscale.grey-50'}>
+                  <Text onClick={handleWorkClick} type="b3" color={'greyscale.grey-50'}>
                     Our Work
                   </Text>
-                  <Text onClick={handlePhilosophyClick} variant={'b3'} color={'greyscale.grey-50'}>
+                  <Text onClick={handlePhilosophyClick} type="b3" color={'greyscale.grey-50'}>
                     Our Philosophy
                   </Text>
-                  <Text onClick={handleTeamClick} variant={'b3'} color={'greyscale.grey-50'}>
+                  <Text onClick={handleTeamClick} type="b3" color={'greyscale.grey-50'}>
                     Our Team
                   </Text>
-                  <Text onClick={handleMetricClick} variant={'b3'} color={'greyscale.grey-50'}>
+                  <Text onClick={handleMetricClick} type="b3" color={'greyscale.grey-50'}>
                     Metric
                   </Text>
                   <Flex
@@ -133,16 +133,16 @@ export const Header = ({ isMobile }: MobileProps) => {
             justifyContent={'space-between'}
             gap={'5rem'}
           >
-            <Text onClick={handleWorkClick} variant={'b3'} color={'greyscale.grey-50'}>
+            <Text onClick={handleWorkClick} type="b3" color={'greyscale.grey-50'}>
               Our Work
             </Text>
-            <Text onClick={handlePhilosophyClick} variant={'b3'} color={'greyscale.grey-50'}>
+            <Text onClick={handlePhilosophyClick} type="b3" color={'greyscale.grey-50'}>
               Our Philosophy
             </Text>
-            <Text onClick={handleTeamClick} variant={'b3'} color={'greyscale.grey-50'}>
+            <Text onClick={handleTeamClick} type="b3" color={'greyscale.grey-50'}>
               Our Team
             </Text>
-            <Text onClick={handleMetricClick} variant={'b3'} color={'greyscale.grey-50'}>
+            <Text onClick={handleMetricClick} type="b3" color={'greyscale.grey-50'}>
               Metric
             </Text>
           </Flex>
