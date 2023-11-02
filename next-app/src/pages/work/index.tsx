@@ -1,4 +1,6 @@
-import { Box, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Flex, SimpleGrid } from '@chakra-ui/react'
+import { Heading } from '../../components/Heading.component'
+import { Text } from '../../components/Text.component'
 
 export default function Home() {
   return (
@@ -13,7 +15,7 @@ export default function Home() {
       >
         <Flex w="100%" paddingTop="245px">
           <Heading
-            variant="h1"
+            type="h1"
             fontWeight={'400'}
             color={'greyscale.grey-50'}
             fontSize={'48px'}
@@ -45,56 +47,29 @@ export default function Home() {
           <Box w="100%" h="454px" bg="greyscale.grey-700">
             {/* Make image the box background. Or place a chakra <Image> here */}
           </Box>
-          <Heading
-            variant="h1"
-            fontWeight={'600'}
-            color={'greyscale.grey-50'}
-            fontSize={'32px'}
-            letterSpacing="-1"
-            lineHeight="36px"
-            p="0"
-            marginTop="16px"
-          >
+          <Heading type="h2" color={'greyscale.grey-50'} marginTop="16px">
             Revolutionizing Medicare Enrollment.
           </Heading>
-          <Text color="greyscale.grey-50" w="100%" fontWeight={'400'}>
+          <Text color="greyscale.grey-50" w="100%" type="b2">
             Scaling a legacy services company with software to create an incredibly valuable new
             SaaS product.
           </Text>
           <Flex w="100%" gap="70px" marginTop="46px">
             <Flex w="100%" flexWrap="wrap">
               <Box w="100%" h="454px" bg="greyscale.grey-700"></Box>
-              <Heading
-                variant="h1"
-                fontWeight={'600'}
-                color={'greyscale.grey-50'}
-                fontSize={'32px'}
-                letterSpacing="-1"
-                lineHeight="36px"
-                p="0"
-                marginTop="16px"
-              >
+              <Heading type="h2" color={'greyscale.grey-50'} w="80%" marginTop="16px">
                 Napkin Sketch to Revenue in 7 Weeks.
               </Heading>
-              <Text color="greyscale.grey-50" w="100%" fontWeight={'400'}>
+              <Text color="greyscale.grey-50" type="b2" w="80%">
                 Building a bold new marketplace from scratch in the professional sports space.
               </Text>
             </Flex>
             <Flex w="100%" flexWrap="wrap">
               <Box w="100%" h="454px" bg="greyscale.grey-700"></Box>
-              <Heading
-                variant="h1"
-                fontWeight={'600'}
-                color={'greyscale.grey-50'}
-                fontSize={'32px'}
-                letterSpacing="-1"
-                lineHeight="36px"
-                p="0"
-                marginTop="16px"
-              >
+              <Heading type="h2" color={'greyscale.grey-50'} w="80%" marginTop="16px">
                 Process Improvement Across Job sites.
               </Heading>
-              <Text color="greyscale.grey-50" w="100%" fontWeight={'400'}>
+              <Text color="greyscale.grey-50" type="b2" w="80%">
                 Creating job site efficiencies at scale in the roofing industry.
               </Text>
             </Flex>
